@@ -122,3 +122,8 @@ var someVariable : Int
 // someVariable += 2 // ERROR: someVariable doesn't have a value, so can't add 2 to it
 someVariable = 2
 someVariable += 2 // WORKS, because someVariable has a value to add to
+
+var someVariableNote =
+"Yes"
+
+someVariableNote = "No"; print(someVariableNote)
