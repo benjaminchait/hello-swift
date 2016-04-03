@@ -58,4 +58,15 @@ case 2:
     print("It's 2")
 default: // note: default is mandatory if not all cases are covered (or can be covered)
     print("It's something else")
-} // Prints "it's something else"
+} // Prints "It's something else"
+
+let stringSwitch = "Hello"
+
+switch stringSwitch {
+case "Hello":
+    print("A greeting")
+case "Goodbye":
+    print("A farewell")
+default:
+    print("Something else")
+} // Prints "A greeting"
