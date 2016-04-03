@@ -46,3 +46,16 @@ let myString = "My number is \(myNumber)"
 
 let myOtherString = "My number plus one is \(myNumber + 1)"
 // = "My number plus one is 4"
+
+let integerSwitch = 3
+
+switch integerSwitch {
+case 0:
+    print("It's 0")
+case 1:
+    print("It's 1")
+case 2:
+    print("It's 2")
+default: // note: default is mandatory if not all cases are covered (or can be covered)
+    print("It's something else")
+} // Prints "it's something else"
