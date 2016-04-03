@@ -10,8 +10,14 @@ if 1+1 == 2 {
 // Prints "The math checks out", which is a relief
 
 let loopingArray = [1,2,3,4,5]
-let loopSum = 0
+var loopSum = 0
 for number in loopingArray {
     loopSum += number
 }
 loopSum // = 15
+
+var firstCounter = 0
+for index in 1 ..< 10 {
+    firstCounter += 1
+}
+// Loops 9 times
