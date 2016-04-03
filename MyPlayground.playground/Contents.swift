@@ -27,3 +27,8 @@ for index in 1 ... 10 {
     secondCounter += 1
 }
 // Loops 10 times
+
+var countDown = 5
+while countDown > 0 {
+    countDown -= 1
+} // = 0
