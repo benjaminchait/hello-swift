@@ -149,3 +149,13 @@ true.description // "true"
 
 /* Types */
 
+// Int represents a whole number, so 1
+// Double represents a decimal number, so 1.2
+// String represents a list of charactrs, so "hello world"
+// Bool for representing boolean state, so true or false
+
+// Implicit type of integer
+var anInteger = 2
+
+// ERROR: can't add a string to an integer
+anInteger += "Yes"
