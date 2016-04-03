@@ -17,7 +17,13 @@ for number in loopingArray {
 loopSum // = 15
 
 var firstCounter = 0
-for index in 1 ... 10 {
+for index in 1 ..< 10 {
     firstCounter += 1
 }
 // Loops 9 times
+
+var secondCounter = 0
+for index in 1 ... 10 {
+    secondCounter += 1
+}
+// Loops 10 times
