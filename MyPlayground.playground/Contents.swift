@@ -39,3 +39,10 @@ repeat {
     countUp += 1
 } while countUp < 5
 countUp // =5
+
+let myNumber = 3
+let myString = "My number is \(myNumber)"
+// = "My number is 3"
+
+let myOtherString = "My number plus one is \(myNumber + 1)"
+// = "My number plus one is 4"
