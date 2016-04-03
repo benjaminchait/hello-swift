@@ -9,6 +9,8 @@ if 1+1 == 2 {
 }
 // Prints "The math checks out", which is a relief
 
+/* Control Flow (Loops, Switches) */
+
 let loopingArray = [1,2,3,4,5]
 var loopSum = 0
 for number in loopingArray {
@@ -109,6 +111,8 @@ default:
     print("Number is something else")
 } // Prints "Number is between 0 and 20" and then "Number is between 0 and 30"
 
+/* Variables and Constants */
+
 var myVariable = 123
 let myConstantVariable = 123
 
@@ -127,3 +131,21 @@ var someVariableNote =
 "Yes"
 
 someVariableNote = "No"; print(someVariableNote)
+
+/* Operators */
+
+1 + 7 // 8
+6 - 5 // 1
+4 / 2 // 2
+4 * 0 // 0
+
+2 == 2 // true
+2 != 2 // false
+"yes" == "no" // false
+"yes" != "no" // true
+
+true.description // "true"
+4.advancedBy(3) // 7
+
+/* Types */
+
