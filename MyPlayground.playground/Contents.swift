@@ -158,4 +158,88 @@ true.description // "true"
 var anInteger = 2
 
 // ERROR: can't add a string to an integer
-anInteger += "Yes"
+// anInteger += "Yes"
+
+let emptyString = ""
+
+let anotherEmptyString = String()
+
+emptyString.isEmpty // = true
+
+var composingAString = "Hello"
+composingAString += ", World!" // = "Hellow, World!"
+
+var reversedString = ""
+for character in "Hello".characters {
+    reversedString = String(character) + reversedString
+}
+reversedString // = "olleH"
+
+"Hello".characters.count // = 5
+
+let string1 : String = "Hello"
+let string2 : String = "Hel" + "lo"
+
+string1.uppercaseString // = "HELLO"
+string2.lowercaseString // = "hello"
+
+if string1 == string2 {
+    print("The strings are equal")
+}
+
+
+if string1 as AnyObject === string2 as AnyObject {
+    print("The strings are the same object")
+}
+
+if string1.hasPrefix("H") {
+    print("String begins with an H")
+}
+if string1.hasSuffix("llo") {
+    print("String ends in 'llo'")
+}
+
+// Optional integer, allowed to be nil
+var anOptionalInteger : Int? = nil
+anOptionalInteger = 42
+
+// Nonoptional (regular), NOT allowed to be nil
+var aNonOptionalInteger = 42
+
+// aNonOptionalInteger = nil
+// ERROR: only optional values can be nil
+
+if anOptionalInteger != nil {
+    print("It has a value!")
+} else {
+    print("It has no value!")
+}
+
+// Optinoal types must be unwrapped using !
+anOptionalInteger = 2
+1 + anOptionalInteger! // = 3
+
+//anOptionalInteger = nil
+//1 + anOptionalInteger!
+//// CRASH: anOptionalInteger = nil, can't use nil data
+
+var implicitlyUnwrappedOptionalInteger : Int!
+implicitlyUnwrappedOptionalInteger = 1
+1 + implicitlyUnwrappedOptionalInteger // = 2
+
+var conditionalString : String? = "a string"
+
+if let theString = conditionalString {
+    print("The string is '\(theString)'")
+} else {
+    print("The string is nil")
+} // Prints "The string is 'a string'"
+
+//if thing is String {
+//    print("Thing is a string!")
+//}
+
+// var maybeString = thing as? String
+
+// maybeString is a String? - an optional string
+// If the check didn't work, maybeString will be nil.
