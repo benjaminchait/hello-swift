@@ -31,4 +31,11 @@ for index in 1 ... 10 {
 var countDown = 5
 while countDown > 0 {
     countDown -= 1
-} // = 0
+}
+countDown // = 0
+
+var countUp = 0
+repeat {
+    countUp += 1
+} while countUp < 5
+countUp // =5
