@@ -70,3 +70,16 @@ case "Goodbye":
 default:
     print("Something else")
 } // Prints "A greeting"
+
+let tupleSwitch = ("Yes", 123)
+
+switch tupleSwitch {
+case ("Yes", 123):
+    print("Tuple contains 'Yes' and '123'")
+case ("Yes", _):
+    print("Tuple contains 'Yes' and something else")
+case (let string, _):
+    print("Tuple contains the string '\(string)' and something else")
+default:
+    break
+} // Prints "Tuple contains 'Yes' and '123'"
