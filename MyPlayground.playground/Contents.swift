@@ -96,3 +96,15 @@ case 21:
 default:
     print("Number is something else")
 } // Prints "Number is between 11 and 20"
+
+let fallthroughSwitch = 10
+
+switch fallthroughSwitch {
+case 0..<20:
+    print("Number is between 0 and 20")
+    fallthrough
+case 0..<30:
+    print("Number is between 0 and 30")
+default:
+    print("Number is something else")
+} // Prints "Number is between 0 and 20" and then "Number is between 0 and 30"
