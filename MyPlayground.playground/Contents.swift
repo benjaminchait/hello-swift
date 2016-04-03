@@ -108,3 +108,17 @@ case 0..<30:
 default:
     print("Number is something else")
 } // Prints "Number is between 0 and 20" and then "Number is between 0 and 30"
+
+var myVariable = 123
+let myConstantVariable = 123
+
+myVariable += 5
+myConstantVariable += 5 // (ERROR: can't change a constant value)
+
+// Explicit type of integer
+let anExplicitInteger : Int = 2
+
+var someVariable : Int
+someVariable += 2 // ERROR: someVariable doesn't have a value, so can't add 2 to it
+someVariable = 2
+someVariable += 2 // WORKS, because someVariable has a value to add to
