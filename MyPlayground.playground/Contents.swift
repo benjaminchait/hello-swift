@@ -9,6 +9,9 @@ if 1+1 == 2 {
 }
 // Prints "The math checks out", which is a relief
 
-if something
-    do(something)
-// Braces are required
+let loopingArray = [1,2,3,4,5]
+var loopSum = 0
+for number in loopingArray {
+    loopSum += number
+}
+loopSum // = 15
