@@ -83,3 +83,16 @@ case (let string, _):
 default:
     break
 } // Prints "Tuple contains 'Yes' and '123'"
+
+var someNumber = 15
+
+switch someNumber {
+case 0...10:
+    print("Number is between 0 and 10")
+case 11...20:
+    print("Number is between 10 and 20")
+case 21:
+    print("Number is 21!")
+default:
+    print("Number is something else")
+} // Prints "Number is between 11 and 20"
