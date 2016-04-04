@@ -239,7 +239,132 @@ if let theString = conditionalString {
 //    print("Thing is a string!")
 //}
 
-// var maybeString = thing as? String
+//var maybeString = thing as? String
 
 // maybeString is a String? - an optional string
 // If the check didn't work, maybeString will be nil.
+
+//var definitelyString = thing as! String
+// definitelyString is a String, and is guaranteed to have a value
+
+let aString = String(2)
+// = "2"
+
+// ERROR: Can't directly convert between types
+//let aString = anInteger
+
+let aTuple = (1, "Yes")
+
+let theNumber = aTuple.0 // = 1
+
+let anotherTuple = (aNumber: 1, aString: "Yes")
+
+let theOtherNumber = anotherTuple.aNumber // = 1
+
+// Array of integers
+let arrayOfIntegers : [Int] = [1,2,3]
+
+// Type of array is implied
+let implicitArrayOfIntegers = [1,2,3]
+
+// You can also create an empty array, but you must provide the type
+let anotherArray = [Int]()
+
+var myArray = [1,2,3]
+myArray.append(4)
+// = [1,2,3,4]
+
+myArray.insert(5, atIndex: 0)
+// = [5,1,2,3,4]
+
+myArray.removeAtIndex(4)
+// = [5,1,2,3]
+
+myArray.reverse()
+// = [3,2,1,5]
+
+myArray.count
+// = 4
+
+let immutableArray = [42,24]
+
+var crew = [
+    "Captain": "Benjamin Sisko",
+    "First Office": "Kira Nerys",
+    "Constable": "Odo"
+]
+
+crew["Captain"]
+// = "Benjamin Sisko"
+
+crew["Doctor"] = "Julian Bashir"
+
+// This dictinoary uses integers for both keys and values
+var aNumberDictionary = [1: 2]
+aNumberDictionary[21] = 23
+
+var aMixedDictionary = ["one": 1, "two": "twoooo"]
+// the type of this dictionary is [String: NSObject], allowing it to have basically any type of value
+
+// enumeration of top secret future iPads that definitely will never exist
+enum FutureiPad {
+    case iPadSuperPro
+    
+    case iPadTotallyPro
+    
+    case iPadLudicrous
+    
+}
+
+var nextiPad = FutureiPad.iPadTotallyPro
+
+nextiPad = .iPadSuperPro
+
+switch nextiPad {
+case .iPadSuperPro:
+    print("Too big!")
+case .iPadTotallyPro:
+    print("Too small!")
+case .iPadLudicrous:
+    print("Just right!")
+}
+
+enum Weapon {
+    case Laser(powerLevel: Int)
+    case Missiles(range: Int)
+}
+
+let spaceLaser = Weapon.Laser(powerLevel: 5)
+
+switch spaceLaser {
+case .Laser(powerLevel: 0...10):
+    print("It's a laser with power from 0 to 10!")
+case .Laser:
+    print("It's a laser!")
+case .Missiles(let range):
+    print("It's a missile with range \(range)!")
+}
+// Prints "It's a laser with power from 0 to 10!"
+
+var setOfStrings = Set<String>()
+
+var fruitSet: Set = ["apple", "orange", "orange", "banana"]
+
+fruitSet.count
+// = 3
+
+if fruitSet.isEmpty {
+    print("My set is empty!")
+}
+
+// Add a new item to the set
+fruitSet.insert("pear")
+
+// Remove an item from the set
+fruitSet.remove("apple")
+// mySet now contains {"banana", "pear", "orange"}
+
+for fruit in fruitSet {
+    let fruitPlural = fruit + "s"
+    print("You know what's tasy? \(fruitPlural.uppercaseString).")
+}
