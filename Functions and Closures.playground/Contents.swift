@@ -130,3 +130,38 @@ incrementByTen() // = 20
 
 var incrementByFifteen = createIncrementor(15)
 incrementByFifteen() // = 15
+
+
+var sortingInline = [2, 5, 98, 2, 13]
+sortingInline.sort() // = [2, 2, 5, 13, 98]
+
+
+var numbers = [2,1,56,32,120,13]
+
+// Sort so that small numbers go before large numbers
+var numbersSorted = numbers.sort({
+    (n1: Int, n2: Int) -> Bool in return n2 > n1
+})
+// = [1, 2, 13, 32, 56, 120]
+
+
+var numbersSortedReverse = numbers.sort({n1, n2 in return n1 > n2})
+// = [120, 56, 32, 13, 2, 1]
+
+
+var numbersSortedAgain = numbers.sort({
+    $1 > $0
+}) // = [1, 2, 13, 32, 56, 120]
+
+
+var numbersSortedReversedAgain = numbers.sort {
+    $0 > $1
+} // = [120, 56, 32, 13, 2, 1]
+
+
+var numbersSortedReversedOneMoreTime = numbers.sort { $0 > $1 }
+// = [120, 56, 32, 13, 2, 1]
+
+
+var comparator = {(a: Int, b:Int) in a < b }
+comparator(1,2) // = true
