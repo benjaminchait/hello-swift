@@ -57,6 +57,7 @@ func multiplyNumbers2 (firstNumber: Int, multiplier: Int = 2) -> Int {
 // Parameters with default values can be omitted
 multiplyNumbers2(2) // = 4
 
+
 func sumNumbers(numbers: Int...) -> Int {
     // in this function, 'numbers' is an array of Ints
     var total = 0
@@ -66,6 +67,7 @@ func sumNumbers(numbers: Int...) -> Int {
     return total
 }
 sumNumbers(2,3,4,5) // = 14
+
 
 func swapValues(inout firstValue: Int, inout _ secondValue: Int) {
     (firstValue, secondValue) = (secondValue, firstValue)
@@ -77,3 +79,54 @@ swapValues(&swap1, &swap2)
 swap1 // = 3
 swap2 // = 2
 
+
+var numbersFunc: (Int, Int) -> Int;
+// numbersFunc can now store any function that takes two ints and returns an int
+
+// Using the 'addNumbers' function from before, which takes two numbres and adds them
+numbersFunc = addNumbers
+numbersFunc(2, 3) // = 5
+
+
+func timesThree(number: Int) -> Int {
+    return number * 3
+}
+
+func doSomethingToNumber(aNumber: Int, thingToDo: (Int)->Int) -> Int {
+    // we've received some function as a parameter, which we refer to as 'thingToDo' inside this function.
+    // call the function 'thingToDo' using 'aNumber', and return the result
+    return thingToDo(aNumber);
+}
+
+// Give the 'timesThree' function to use as 'thingToDo'
+doSomethingToNumber(4, thingToDo: timesThree) // = 12
+
+
+// This function takes an Int as a parameter. It returns a new function that takes an Int parameter and return and Int.
+func createAdder(numberToAdd: Int) -> (Int) -> Int {
+    func adder(number: Int) -> Int {
+        return number + numberToAdd
+    }
+    return adder
+}
+var addTwo = createAdder(2)
+
+// addTwo is now a function that can be called
+addTwo(2) // = 4
+
+
+func createIncrementor(incrementAmount: Int) -> () -> Int {
+    var amount = 0
+    func incrementor() -> Int {
+        amount += incrementAmount
+        return amount
+    }
+    return incrementor
+}
+
+var incrementByTen = createIncrementor(10)
+incrementByTen() // = 10
+incrementByTen() // = 20
+
+var incrementByFifteen = createIncrementor(15)
+incrementByFifteen() // = 15
