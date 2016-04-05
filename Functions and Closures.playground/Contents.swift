@@ -56,3 +56,24 @@ func multiplyNumbers2 (firstNumber: Int, multiplier: Int = 2) -> Int {
 }
 // Parameters with default values can be omitted
 multiplyNumbers2(2) // = 4
+
+func sumNumbers(numbers: Int...) -> Int {
+    // in this function, 'numbers' is an array of Ints
+    var total = 0
+    for number in numbers {
+        total += number
+    }
+    return total
+}
+sumNumbers(2,3,4,5) // = 14
+
+func swapValues(inout firstValue: Int, inout _ secondValue: Int) {
+    (firstValue, secondValue) = (secondValue, firstValue)
+}
+
+var swap1 = 2
+var swap2 = 3
+swapValues(&swap1, &swap2)
+swap1 // = 3
+swap2 // = 2
+
