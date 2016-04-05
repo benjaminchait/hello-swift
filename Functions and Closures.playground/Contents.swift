@@ -165,3 +165,22 @@ var numbersSortedReversedOneMoreTime = numbers.sort { $0 > $1 }
 
 var comparator = {(a: Int, b:Int) in a < b }
 comparator(1,2) // = true
+
+
+func doSomeWork() {
+    print("Getting started!")
+    defer {
+        print("All done!")
+    }
+    print("Getting to work!")
+}
+
+doSomeWork()
+// Prints "Getting started!", "Getting to work!" and "All done!", in that order
+
+
+guard 2+2 == 4 else {
+    print("The universe makes no sense")
+    return // this is mandatory!
+}
+print("We can continue with our daily lives")
