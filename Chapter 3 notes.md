@@ -31,3 +31,5 @@
  - ex: visible (can be accessed) within only its source file, or entire app
 
 - Operator Overloading
+
+- Generics: see Playground 🎉
