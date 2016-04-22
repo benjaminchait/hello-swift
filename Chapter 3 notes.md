@@ -33,3 +33,9 @@
 - Operator Overloading
 
 - Generics: see Playground 🎉
+
+- Subscripts
+
+- Structures: related to classes, but not the same
+  - no inheritance
+  - when passed around via code, a structure is _copied_
