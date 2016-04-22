@@ -44,3 +44,30 @@
 
 - Foundation, Cocoa, Cocoa Touch, and the Swift Standard Library
   - `import Cocoa` or `import UIKit`
+
+- Data: aka `NSData`
+
+- Error Handling
+
+- Memory Management
+  - _memory managed_
+  - _reference counting_ = technique Swift uses to keep track of which objects are being used and which are not
+  - _weak references_ = object needs not stay in memory
+
+- Design Patterns in Cocoa and Cocoa Touch
+  - Model-View-Controller (MVC)
+  - Delegation pattern
+  - Notifications
+
+- Model-View-Controller
+  - _Models_ = objects storing data
+  - _Views_ = objects working with user
+  - _Controllers_ = objects mediating between _models_ and _views_; "business logic"
+
+- Delegation
+  - “Delegation is Cocoa’s term for passing off some responsibilities of an object to another.”
+
+- Structuring an app
+  - _event-driven programming_
+  - "application delegate" aka _app delegate_
+  - Window controllers (macOS) and View Controllers (iOS)
