@@ -39,3 +39,8 @@
 - Structures: related to classes, but not the same
   - no inheritance
   - when passed around via code, a structure is _copied_
+
+- Modules
+
+- Foundation, Cocoa, Cocoa Touch, and the Swift Standard Library
+  - `import Cocoa` or `import UIKit`
